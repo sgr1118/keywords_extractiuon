@@ -1,11 +1,12 @@
 from typing import Any
 from data_load.data_load import load_data
 from key_extraction.base import Agent
+from embeddings.models import BaseEmbedder
 
 class KeywordsExtraction(Agent) :
     def __init__(self, 
                  sentencce : str, 
-                 embedding : Any) :
+                 embedding : BaseEmbedder) :
         
         self.sentence = sentencce
         self.embedding = embedding
